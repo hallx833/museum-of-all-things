@@ -156,13 +156,10 @@ func _on_invert_y_toggled(toggled_on: bool):
   GlobalMenuEvents.emit_set_invert_y(toggled_on)
 
 func _on_sensitivity_value_changed(value: float):
-  $MouseOptions/SensitivityValue.text = str(int(value * 100)) + "%"
   GlobalMenuEvents.emit_set_mouse_sensitivity(value)
 
 func _on_deadzone_value_changed(value: float):
-  $JoyOptions/DeadzoneValue.text = str(int(value * 100)) + "%"
   GlobalMenuEvents.emit_set_joypad_deadzone(value)
 
 func _on_joypad_sensitivity_value_changed(value: float) -> void:
-  $JoyOptions/SensitivityValue.text = str(int(value * 100)) + "%"
   GlobalMenuEvents.emit_set_joypad_sensitivity(value)

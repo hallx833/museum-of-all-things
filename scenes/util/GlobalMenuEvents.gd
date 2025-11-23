@@ -20,6 +20,7 @@ signal set_mouse_sensitivity(factor: float)
 signal set_joypad_deadzone(value: float)
 signal set_joypad_sensitivity(factor: float)
 signal set_language(language: String)
+signal percentage_slider_focused(label: Label)
 
 func emit_ui_cancel_pressed():
   emit_signal("ui_cancel_pressed")
@@ -80,3 +81,6 @@ func emit_set_joypad_sensitivity(factor: float):
 
 func emit_set_language(language: String):
   emit_signal("set_language", language)
+
+func emit_percentage_slider_focused(label: Label):
+    emit_signal("percentage_slider_focused", label)
