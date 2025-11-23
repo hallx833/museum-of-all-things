@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cah8jnesp3dgx" path="res://scenes/menu/AudioSettings.tscn" id="5_yolm2"]
 [ext_resource type="PackedScene" uid="uid://ychsh5rigt5i" path="res://scenes/menu/ControlSettings.tscn" id="8_xtrup"]
 
-[node name="Settings" type="Control" unique_id=761779844]
+[node name="Settings" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,7 +19,7 @@ grow_vertical = 2
 theme = ExtResource("1_v0h4s")
 script = ExtResource("1_4scry")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1677715574]
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,7 +30,7 @@ follow_focus = true
 horizontal_scroll_mode = 0
 script = ExtResource("3_ds06t")
 
-[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer" unique_id=498924330]
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -39,12 +39,12 @@ theme_override_constants/margin_top = 25
 theme_override_constants/margin_right = 25
 theme_override_constants/margin_bottom = 25
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer" unique_id=1989136014]
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="TabBar" type="TabBar" parent="ScrollContainer/MarginContainer/VBoxContainer" unique_id=1341030022]
+[node name="TabBar" type="TabBar" parent="ScrollContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 current_tab = 0
 tab_alignment = 1
@@ -55,29 +55,29 @@ tab_2/title = "Controls"
 tab_3/title = "Controls"
 tab_4/title = "Data"
 
-[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/MarginContainer/VBoxContainer" unique_id=225678941]
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 75
 theme_override_constants/margin_top = 75
 theme_override_constants/margin_right = 75
 theme_override_constants/margin_bottom = 75
 
-[node name="GraphicsSettings" parent="ScrollContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=128214440 instance=ExtResource("2_whl1p")]
+[node name="GraphicsSettings" parent="ScrollContainer/MarginContainer/VBoxContainer/MarginContainer" instance=ExtResource("2_whl1p")]
 layout_mode = 2
 
-[node name="AudioSettings" parent="ScrollContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=168628563 instance=ExtResource("5_yolm2")]
+[node name="AudioSettings" parent="ScrollContainer/MarginContainer/VBoxContainer/MarginContainer" instance=ExtResource("5_yolm2")]
 visible = false
 layout_mode = 2
 
-[node name="DataSettings" parent="ScrollContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=978399385 instance=ExtResource("5_mo3yx")]
+[node name="DataSettings" parent="ScrollContainer/MarginContainer/VBoxContainer/MarginContainer" instance=ExtResource("5_mo3yx")]
 visible = false
 layout_mode = 2
 
-[node name="XrControlsMenu" parent="ScrollContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=496696092 instance=ExtResource("3_s7rjb")]
+[node name="XrControlsMenu" parent="ScrollContainer/MarginContainer/VBoxContainer/MarginContainer" instance=ExtResource("3_s7rjb")]
 visible = false
 layout_mode = 2
 
-[node name="ControlSettings" parent="ScrollContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=614712425 instance=ExtResource("8_xtrup")]
+[node name="ControlSettings" parent="ScrollContainer/MarginContainer/VBoxContainer/MarginContainer" instance=ExtResource("8_xtrup")]
 visible = false
 layout_mode = 2
 

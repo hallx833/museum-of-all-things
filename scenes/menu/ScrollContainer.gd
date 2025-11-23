@@ -4,11 +4,14 @@ extends ScrollContainer
 @export var scroll_speed: float = 500.0
 @export var joystick_axis: int = JOY_AXIS_RIGHT_Y
 
+@onready var control_settings := $MarginContainer/VBoxContainer/MarginContainer/ControlSettings
+
 var enabled = false
 
 func _ready():
   if not Util.is_xr():
     enabled = true
+    GlobalMenuEvents.percentage_slider_focused.connect(_on_percentage_slider_focused)
 
 func _process(delta: float) -> void:
   if not enabled:
@@ -21,3 +24,6 @@ func _process(delta: float) -> void:
 
   scroll_vertical = round(scroll_vertical + joy_input * scroll_speed * delta)
   scroll_vertical = clamp(scroll_vertical, 0.0, get_v_scroll_bar().max_value)
+
+func _on_percentage_slider_focused(label: Label) -> void:
+    ensure_control_visible(label)
